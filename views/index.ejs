@@ -3,31 +3,34 @@
 <head>
     <meta charset="utf-8">
     <title>Node.js Simple File Upload</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        #uploadForm{
-            padding-top: 20px;
-            display: flex;
-            justify-content: space-between;
+        body {
+            padding: 2em 1em;
         }
-        input.btn{
-            flex: 0.8;
-        }
-        button.btn{
-            flex: 0.15;
+        .container {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2em;
+            border: 2px solid whitesmoke;
+            border-radius: 1em;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <form action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="files"
-            class="btn btn-primary" id="file"
-            multiple>
-            <button class="btn btn-primary" type="submit" style="border-radius: 4px;">
-                Upload
+        <form action="/" method="post" enctype="multipart/form-data" class="mb-4" >
+            <h1 class="h2 mb-4 text-center">Upload files</h1>
+            <div class="mb-3" >
+                
+                <input type="file" name="files" class="form-control form-control-md" id="file" multiple>
+            </div>
+            <button class="btn btn-primary w-100" type="submit">
+                Upload Files
             </button>
         </form>
+        <div class="text-success-emphasis text-center" ><%= message %></div>
     </div>
     <script type="text/javascript">
         document.getElementById("file").value = "";

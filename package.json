@@ -4,13 +4,15 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "dotenv": "^16.4.1",
     "ejs": "^3.1.8",
     "express": "^4.16.2",
     "multer": "^1.4.5-lts.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "standard *.js --fix"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Majidkn/nodejs-simple-file-upload/issues"
   },
-  "homepage": "https://github.com/Majidkn/nodejs-simple-file-upload#readme"
+  "homepage": "https://github.com/Majidkn/nodejs-simple-file-upload#readme",
+  "devDependencies": {
+    "standard": "^17.1.0"
+  }
 }
